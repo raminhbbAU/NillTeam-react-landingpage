@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { notification } from "antd";
 import axios from "axios";
 
@@ -14,7 +14,14 @@ export const useForm = (validate: any) => {
     });
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && shouldSubmit) {
+      setValues("");
+      openNotificationWithIcon();
+    }
+  }, [errors, shouldSubmit]);
+
+  const handleSubmit = (event:any) => {
     event.preventDefault();
     setErrors(validate(values));
     // Your url for API
@@ -30,14 +37,7 @@ export const useForm = (validate: any) => {
     }
   };
 
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && shouldSubmit) {
-      setValues("");
-      openNotificationWithIcon();
-    }
-  }, [errors, shouldSubmit]);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event:any) => {
     event.persist();
     setValues((values) => ({
       ...values,

@@ -1,3 +1,4 @@
+import React from "react";
 import { withTranslation } from "react-i18next";
 import { Container, StyledInput } from "./styles";
 import { Label } from "../TextArea/styles";

@@ -1,3 +1,4 @@
+import React from 'react';
 import LeftContentBlock from "./LeftContentBlock";
 import RightContentBlock from "./RightContentBlock";
 import { ContentBlockProps } from "./types";
