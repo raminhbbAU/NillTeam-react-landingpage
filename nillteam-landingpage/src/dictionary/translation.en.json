@@ -1,10 +1,39 @@
 {
-    "About": "About",
+    "Menu":"Menu",
+    "Home":"Home",
+    "Team":"Team",
+    "Programs":"Programs",
+    "Nutrition":"Nutrition",
+    "Courses":"Courses",
+    "Contact":"Contact",
+
+    "Intro_Title":"Have you ever heard about Nill Team?",
+    "Intro_Description":"We are a group of professional sport trainer to help you be fit and healthy! We hold our session online and in person at gym.",
+    "Intro_Button":"Read More",
+    "Intro_logo":"people-exercise2.svg",
+
+    "Team_Title":"Our Team",
+    "Team_Description":"",
+    "Team_Members":[
+      {"id":1,"name":"Niloo","description":"A senior personal trainer with over 11 years of comprehensive experience in the bodybuilding, fitness, and TRX. customer-solutions provider and professional at physical therapy, nutrition and competitional fitness.","img":"img/gallery/review-img-2.jpg"},
+      {"id":2,"name":"Mohamad","description":"Professional bodybuilder with 5 years of experience in the competitive bodybuilding field. Extensive knowledge in specialized lifting techniques and dietary field, with demonstrated results in top bodybuilding events.","img":"img/gallery/courses-bodybuilding.jpg"},
+      {"id":3,"name":"Elham","description":"Customer-focused personal trainer with proven track record in delivering the right raining regimen and dietary information to successfully achieve the clients' goals.","img":"img/gallery/review-img-2.jpg"}
+    ],
+
+    "Course_Title":"Courses",
+    "Course_Description":"",
+    "Course_list":[
+      {"id":1,"name":"TRX","description":"","img":"img/gallery/review-img-2.jpg"},
+      {"id":2,"name":"Fitness","description":"","img":"img/gallery/courses-bodybuilding.jpg"},
+      {"id":3,"name":"Cardio","description":"","img":"img/gallery/review-img-2.jpg"},
+      {"id":3,"name":"Body Building","description":"","img":"img/gallery/review-img-2.jpg"}
+    ],
+
     "Policy": "Policy",
     "Mission": "Mission",
     "Product": "Product",
     "Tell us everything": "Tell us everything",
-    "Contact": "Contact",
+    
     "Do you have any question? Feel free to reach out.": "Do you have any question? Feel free to reach out.",
     "Let's Chat": "Let's Chat",
     "Application Security": "Application Security",

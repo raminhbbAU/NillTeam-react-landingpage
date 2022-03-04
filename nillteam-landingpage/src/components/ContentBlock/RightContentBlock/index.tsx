@@ -27,9 +27,9 @@ const RightBlock = ({
     });
   };
   return (
-    <RightBlockContainer>
+    <RightBlockContainer id={id}>
       <Fade direction="right">
-        <Row justify="space-between" align="middle" id={id}>
+        <Row justify="space-between" align="middle">
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>

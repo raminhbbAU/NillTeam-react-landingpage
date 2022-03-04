@@ -27,28 +27,5 @@ const Router = () => {
   );
 };
 
-// const Router = () => {
-
-//   const route = (
-//     <Switch>
-//       {routes.map((routeItem) => {
-//         return (
-//           <Route
-//             key={routeItem.component}
-//             path={routeItem.path}
-//             exact={routeItem.exact}
-//             component={lazy(() => import(`../pages/${routeItem.component}`))}
-//           />
-//         );
-//       })}
-//     </Switch>
-//   )
-
-//     console.log(route);
-
-//   return (
-//     route
-//   );
-// };
 
 export default Router;

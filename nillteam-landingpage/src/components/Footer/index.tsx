@@ -103,27 +103,6 @@ const Footer = ({ t }: any) => {
                 {t("Careers & Culture")}
               </Large>
             </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
-            </Col>
           </Row>
         </Container>
       </FooterSection>

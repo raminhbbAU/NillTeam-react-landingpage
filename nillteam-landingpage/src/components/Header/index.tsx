@@ -1,9 +1,10 @@
 import React,{ useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation } from "react-i18next";
+import i18n from "i18next";
 import Container from "../../components/common/Container";
 import { SvgIcon } from "../../components/common/SvgIcon";
-import { Button } from "../../components/common/Button";
+
 import {
   HeaderSection,
   LogoContainer,
@@ -14,6 +15,8 @@ import {
   Label,
   Outline,
   Span,
+  LanguageSwitchContainer,
+  LanguageSwitch
 } from "./styles";
 
 const Header = ({ t }: any) => {
@@ -27,32 +30,44 @@ const Header = ({ t }: any) => {
     setVisibility(!visible);
   };
 
+      
+  const languageChange = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
   const MenuItem = () => {
+
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
+      
+      if (element)
+      {
+        element.scrollIntoView({
+          behavior: "smooth",
+        });
+        setVisibility(false);
+      }
     };
+
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("home")}>
+          <Span>{t("Home")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("team")}>
+          <Span>{t("Team")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("courses")}>
+          <Span>{t("Courses")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
-        >
-          <Span>
-            <Button>{t("Contact")}</Button>
-          </Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("programs")}>
+          <Span>{t("Programs")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("nutrition")}>
+          <Span>{t("Nutrition")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
+          <Span>{t("Contact")}</Span>
         </CustomNavLinkSmall>
       </>
     );
@@ -62,21 +77,53 @@ const Header = ({ t }: any) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between">
+
+          <div>
+          <Row>
+            <col>
+            </col>
+          </Row>
+          <Col lg={6} md={6} sm={12} xs={12}>
+              <LanguageSwitchContainer>
+                <LanguageSwitch onClick={() => languageChange("en")}>
+                  <SvgIcon
+                    src="united-states.svg"
+                    aria-label="homepage"
+                    width="30px"
+                    height="30px"
+                  />
+                </LanguageSwitch>
+                <LanguageSwitch onClick={() => languageChange("fa")}>
+                  <SvgIcon
+                    src="spain.svg"
+                    aria-label="homepage"
+                    width="30px"
+                    height="30px"
+                  />
+                </LanguageSwitch>
+              </LanguageSwitchContainer>
+            </Col>
+          </div>
+
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="101px" height="64px" />
           </LogoContainer>
+          
           <NotHidden>
             <MenuItem />
           </NotHidden>
+          
           <Burger onClick={showDrawer}>
             <Outline />
           </Burger>
+
         </Row>
+        
         <Drawer closable={false} visible={visible} onClose={onClose}>
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={onClose}>
               <Col span={12}>
-                <Menu>Menu</Menu>
+                <Menu>{t("Menu")}</Menu>
               </Col>
               <Col span={12}>
                 <Outline />
