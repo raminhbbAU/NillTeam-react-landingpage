@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CourseSection = styled("section")`
-  background-color:red;
   text-align: center;
   justify-content: center;
   @media screen and (max-width: 1024px) {
@@ -13,7 +12,7 @@ export const PageTitle = styled("h6")`
 `;
 
 export const CourseTitle = styled("p")`
-  font-size: 15px;
+  font-size: 18px;
 `;
 
 

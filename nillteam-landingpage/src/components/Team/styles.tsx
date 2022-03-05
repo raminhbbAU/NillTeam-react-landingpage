@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const TeamSection = styled("section")`
-  background-color:green;
   position: relative;
   text-align: center;
   justify-content: center;

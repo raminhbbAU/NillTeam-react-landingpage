@@ -20,18 +20,19 @@ const Course = ({ title, content, courses, id, t }: CourseProps) => {
     });
   };
 
-  const courselist = courses.map((course: any) => (
-    <Col lg={12} md={12} sm={24} xs={24}>
+
+  const courselist = courses.map((course: any,i:any) => {
+    return (<Col span={11} offset={i % 2 ==0 ? 0 : 2}>
       <CourseImage src={course.img}></CourseImage>
       <CourseTitle>{course.name}</CourseTitle>
-    </Col>
-  ));
+    </Col>)
+  });
 
   return (
     <CourseSection id={id}>
       <Slide direction="down">
-        <ContentWrapper>
-          <Row>
+        {/* <ContentWrapper> */}
+          <Row  >
             <Col lg={24} md={24} sm={24} xs={24}>
               <PageTitle>{title}</PageTitle>
             </Col>
@@ -39,7 +40,7 @@ const Course = ({ title, content, courses, id, t }: CourseProps) => {
           <Row align="top" justify="end">
             {courselist}
           </Row>
-        </ContentWrapper>
+        {/* </ContentWrapper> */}
       </Slide>
     </CourseSection>
   );

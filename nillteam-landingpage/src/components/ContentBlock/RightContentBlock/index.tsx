@@ -19,6 +19,7 @@ const RightBlock = ({
   icon,
   t,
   id,
+  picture
 }: ContentBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
@@ -52,7 +53,12 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            {icon && (
+              <SvgIcon src={icon} width="100%" height="100%" />
+            )}
+            {picture && (
+              <img src={picture} width="100%" height="100%" />
+            )}
           </Col>
         </Row>
       </Fade>

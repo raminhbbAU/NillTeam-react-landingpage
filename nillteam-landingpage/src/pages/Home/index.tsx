@@ -1,5 +1,6 @@
 import React,{ lazy } from 'react';
 import { withTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const Container = lazy(() => import("../../components/common/Container"));
 const ScrollToTop = lazy(() => import("../../components/common/ScrollToTop"));
@@ -14,7 +15,7 @@ function Home({ t }: any) {
     <Container>
        <ScrollToTop />
        <ContentBlock
-        type="right"
+        type= "right"
         title={t("Intro_Title")}
         content={t("Intro_Description")}
         button={t("Intro_Button")}
@@ -34,37 +35,26 @@ function Home({ t }: any) {
        courses={t("Course_list", { returnObjects: true })}
        id="course"
       />
+      <ContentBlock
+        type="left"
+        title={t("Program_Title")}
+        content={t("Program_Description")}
+        button={t("Program__Button")}
+        picture={t("Program_logo")}
+        id="program"
+      />
+      <ContentBlock
+        type="right"
+        title={t("Nutrition_Title")}
+        content={t("Nutrition_Description")}
+        button={t("Nutrition__Button")}
+        picture={t("Nutrition_logo")}
+        id="nutrition"
+      />
       <MiddleBlock
         title={"title"}
         content={"text"}
         button={"button"}
-      />
-      <ContentBlock
-        type="left"
-        title={"title"}
-        content={"text"}
-        button={"button"}
-        icon="graphs.svg"
-        id="about"
-      />
-      <ContentBlock
-        type="right"
-        title={"title"}
-        content={"text"}
-        icon="product-launch.svg"
-        id="mission"
-      />
-      <ContentBlock
-        type="left"
-        title={"title"}
-        content={"text"}
-        icon="waving.svg"
-        id="product"
-      />
-      <Contact
-        title={"title"}
-        content={"text"}
-        id="contact"
       />
     </Container>
   );

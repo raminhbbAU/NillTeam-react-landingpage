@@ -76,14 +76,9 @@ const Header = ({ t }: any) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" align="middle">
 
-          <div>
-          <Row>
-            <col>
-            </col>
-          </Row>
-          <Col lg={6} md={6} sm={12} xs={12}>
+          <Col>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => languageChange("en")}>
                   <SvgIcon
@@ -102,17 +97,16 @@ const Header = ({ t }: any) => {
                   />
                 </LanguageSwitch>
               </LanguageSwitchContainer>
-            </Col>
-          </div>
+              <LogoContainer to="/" aria-label="homepage">
+                <SvgIcon src="logo.svg" width="101px" height="64px" />
+              </LogoContainer>
+          </Col>
 
-          <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
-          </LogoContainer>
           
           <NotHidden>
-            <MenuItem />
+              <MenuItem />
           </NotHidden>
-          
+
           <Burger onClick={showDrawer}>
             <Outline />
           </Burger>
