@@ -1,6 +1,8 @@
-import React,{ lazy } from 'react';
+import React,{ lazy,useEffect,useState } from 'react';
 import { withTranslation } from "react-i18next";
 import i18n from "i18next";
+import useGeoLocation from "../../service/location.service";
+
 
 const Container = lazy(() => import("../../components/common/Container"));
 const ScrollToTop = lazy(() => import("../../components/common/ScrollToTop"));
@@ -11,6 +13,33 @@ const Team = lazy(() => import("../../components/Team"));
 const Course = lazy(() => import("../../components/Course"));
 
 function Home({ t }: any) {
+
+  const [ipLocationLoading,setIpLocationLoading]= useState(true);
+  const location = useGeoLocation();
+
+  useEffect(() => {  
+
+    if (ipLocationLoading)
+    {
+      if (!location.isLoading)
+      {
+        setIpLocationLoading(false);  
+        if (location.country === 'IR'){
+          languageChange("fa")
+        }
+        else{
+          languageChange("en")
+        }
+       
+      }
+    }
+
+  }, [location]);
+
+  const languageChange = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
   return (
     <Container>
        <ScrollToTop />
