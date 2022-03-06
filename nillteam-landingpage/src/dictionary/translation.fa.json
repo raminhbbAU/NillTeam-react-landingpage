@@ -1,17 +1,51 @@
 {
-  "Menu":"منو",
-  "Team":"اعضای تیم",
-  "Sport":"برنامه",
-  "Diet":"رژیم",
-  "Enroll":"ثبت نام",
-  "Tools":"ابزار",
-  "News":"اخبار",
-  "About": "درباره",
-  "Contact": "ارتباط",
-
-  "Intro_Title":"تا حالا درباره ما شنیدید؟",
-  "Intro_Description":"ما یه گروه از مربیان حرفه ای فیتنس و بدنسازی هستیم که کمک میکنیم شما فیت باشید! کلاس های ما هم به صورت حضوری هم آنلاین برگزار میشه",
-  "Intro_Button":"بیشتر",
-  "Intro_logo":"people-exercise2.svg"
+    "Menu":"منو",
+    "Home":"خانه",
+    "Team":"تیم ما",
+    "Programs":"برنامه تمرین",
+    "Nutrition":"رژیم",
+    "Courses":"دوره",
+    "Contact":"تماس با ما",
+  
+    "Intro_Title":"تا حالا درباره ما شنیدید؟",
+    "Intro_Description":"ما یه گروه از مربیان حرفه ای فیتنس و بدنسازی هستیم که کمک میکنیم شما فیت باشید! کلاس های ما هم به صورت حضوری هم آنلاین برگزار میشه",
+    "Intro_Button":"بیشتر",
+    "Intro_logo":"people-exercise2.svg",
+  
+    "Team_Title":"تیم ما",
+    "Team_Description":"",
+    "Team_Members":[
+      {"id":1,"name":"نیلوفر","description":"نیلوفر یکی از با تجربه های تیم ما با 11 سال سابقه مربیگری فیتنس بدنسازی و تی آر ایکس هست. تخصص اصلیش آسیب های ورزشی ، رژیم و تغذیه و فیتنس هست.","img":"img/asset/Nilou.jpg"},
+      {"id":2,"name":"محمد","description":"محمد یک بدنساز حرفه ای با 5 سال سابقه مربیگری هست. علایقش بیشتر در رابطه با تکنیک های لیفت کردن و برنامه های بدنسازی جهت مسابقات هست.","img":"img/asset/Mohamad.jpg"},
+      {"id":3,"name":"الهام","description":"الهام یه مربی با سابقه فیتنس ، کاردیو و بدنسازی هست که علاقه داره بیشتر با شاگردها وقت بگذرونه برای اینکه مطمئن بشه اونها طبق برنامه غذایی و ورزشی که دارن به هدفشون برسند.","img":"img/asset/Elham.jpg"}
+    ],
+  
+    "Course_Title":"دوره ها",
+    "Course_Description":"",
+    "Course_list":[
+      {"id":1,"name":"TRX","description":"","img":"img/asset/trx.jpg"},
+      {"id":2,"name":"فیتنس","description":"","img":"img/asset/fitness.jpg"},
+      {"id":3,"name":"چربی سوزی","description":"","img":"img/asset/cardio.jpg"},
+      {"id":3,"name":"بدن سازی","description":"","img":"img/asset/bodybuilding.png"}
+    ],
+  
+    "Program_Title":"اگه خیلی وقته دنبال یه برنامه خوب میگشتی الان وقتشه",
+    "Program_Description":"ما فقط اینجا نیستیم که با هم ورزش کنیم ما میخوایم برای رسیدن به هدفت قدم به قدم بهت انرژی بدیم. اگه هنوز نمیدونی چه برنامه ورزشی برای تو مناسب هست مربیان تیم ما میتونند یه برنامه حرفه ای و اختصاصی برات تهیه کنند.",
+    "Program_Button":"بیشتر",
+    "Program_logo":"img/asset/program.jpg",
+  
+    "Nutrition_Title":"رژیم غذایی برای چاق شدن یا لاغری؟",
+    "Nutrition_Description":"اگه تا الان چندین رژیم مختلف رو تست کردی و موفقیت نداشته برات نگران نباش ، مربیان ما برات رژیم کالری شماری اختصاصی بر اساس نوع استایل بدنی و غذاهایی که مورد علاقت هست تهیه می کنند.",
+    "Nutrition_Button":"بیشتر",
+    "Nutrition_logo":"img/asset/diet2.jpg",
+  
+    "Tell us everything":"Tell us everything",
+    "Do you have any question? Feel free to reach out.": "اگه نیاز به مشاوره داشتید، با ما در تماس باشید",
+    "Let's Chat": "چت آنلاین",
+    "Address": "آدرس",
+    "Address_Line1": "تهران پونک شمالی",
+    "Address_Line2": "بلوار عدل",
+    "Address_Line3": "سرای محله پونک",
+    "Social media": "شبکه های اجتماعی"
   }
   

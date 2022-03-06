@@ -33,7 +33,7 @@ function Home({ t }: any) {
        title={t("Course_Title")}
        content={t("Course_Description")} 
        courses={t("Course_list", { returnObjects: true })}
-       id="course"
+       id="courses"
       />
       <ContentBlock
         type="left"
@@ -41,7 +41,7 @@ function Home({ t }: any) {
         content={t("Program_Description")}
         button={t("Program__Button")}
         picture={t("Program_logo")}
-        id="program"
+        id="programs"
       />
       <ContentBlock
         type="right"
@@ -50,11 +50,6 @@ function Home({ t }: any) {
         button={t("Nutrition__Button")}
         picture={t("Nutrition_logo")}
         id="nutrition"
-      />
-      <MiddleBlock
-        title={"title"}
-        content={"text"}
-        button={"button"}
       />
     </Container>
   );

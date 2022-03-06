@@ -76,51 +76,78 @@ const Header = ({ t }: any) => {
   return (
     <HeaderSection>
       <Container>
+
         <Row justify="space-between" align="middle">
 
-          <Col>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => languageChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => languageChange("fa")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
+            <Col lg={4} md={4} sm={4} xs={4} >
               <LogoContainer to="/" aria-label="homepage">
                 <SvgIcon src="logo.svg" width="101px" height="64px" />
               </LogoContainer>
-          </Col>
+            </Col>
+            <Col lg={15} md={15} sm={0} xs={0}>
+              <NotHidden>
+                <MenuItem />
+              </NotHidden>
+            </Col>
+            <Col lg={4} md={4} sm={0} xs={0} >
+              <NotHidden>
+                <LanguageSwitchContainer>
+                    <LanguageSwitch onClick={() => languageChange("en")}>
+                      <SvgIcon
+                        src="united-states.svg"
+                        aria-label="homepage"
+                        width="30px"
+                        height="30px"
+                      />
+                    </LanguageSwitch>
+                    <LanguageSwitch onClick={() => languageChange("fa")}>
+                      <SvgIcon
+                        src="iran.svg"
+                        aria-label="homepage"
+                        width="30px"
+                        height="30px"
+                      />
+                    </LanguageSwitch>
+                </LanguageSwitchContainer>
+              </NotHidden>
+            </Col>
 
-          
-          <NotHidden>
-              <MenuItem />
-          </NotHidden>
-
-          <Burger onClick={showDrawer}>
-            <Outline />
-          </Burger>
+            <Burger onClick={showDrawer}>
+              <Outline />
+            </Burger>
 
         </Row>
         
         <Drawer closable={false} visible={visible} onClose={onClose}>
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={onClose}>
-              <Col span={12}>
+              <Col span={9} offset={9}>
                 <Menu>{t("Menu")}</Menu>
+
               </Col>
-              <Col span={12}>
-                <Outline />
+              <Col span={2}>
+                <LanguageSwitchContainer>
+                  <LanguageSwitch onClick={() => languageChange("en")}>
+                      <SvgIcon
+                        src="united-states.svg"
+                        aria-label="homepage"
+                        width="25px"
+                        height="25px"
+                      />
+                  </LanguageSwitch>
+                </LanguageSwitchContainer>
+              </Col>
+              <Col span={2}>
+                <LanguageSwitchContainer>
+                  <LanguageSwitch onClick={() => languageChange("fa")}>
+                      <SvgIcon
+                        src="iran.svg"
+                        aria-label="homepage"
+                        width="25px"
+                        height="25px"
+                      />
+                  </LanguageSwitch>
+                </LanguageSwitchContainer>
               </Col>
             </Label>
           </Col>

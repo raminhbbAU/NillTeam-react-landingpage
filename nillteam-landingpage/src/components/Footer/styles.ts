@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  background: rgb(241, 242, 243);
-  padding: 2.5rem 0;
+  background: rgb(227, 232, 243);
+  padding: 2.5rem 20px;
 `;
 
 export const Title = styled("h4")`
@@ -91,7 +91,6 @@ export const FooterContainer = styled("div")`
   max-width: 510px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   text-align: center;
   align-items: center;
   transition: all 0.1s ease-in-out;
@@ -136,6 +135,16 @@ export const Language = styled("h4")`
   }
 `;
 
+export const Right = styled("p")`
+  font-size: 10px;
+  text-transform: capitalize;
+  color: #888;
+
+  @media screen and (max-width: 414px) {
+    padding: 1.5rem 0;
+  }
+`;
+
 export const Label = styled("label")`
   font-size: 22px;
   text-transform: capitalize;
@@ -148,23 +157,4 @@ export const Label = styled("label")`
     padding: 1.5rem 0;
     margin-bottom: 1rem;
   }
-`;
-
-export const LanguageSwitch = styled("div")<any>`
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-
-  &:hover,
-  &:active,
-  &:focus {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-`;
-
-export const LanguageSwitchContainer = styled("div")`
-  display: flex;
-  justify-content: space-between;
-  width: 85px;
 `;

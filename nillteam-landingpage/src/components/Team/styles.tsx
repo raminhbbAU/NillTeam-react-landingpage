@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const TeamSection = styled("section")`
+  background: rgb(227, 232, 243);
   position: relative;
   text-align: center;
   justify-content: center;
+  padding: 0 20px;
   @media screen and (max-width: 1024px) {
     padding: 5.5rem 0 3rem;
   }

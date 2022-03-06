@@ -22,10 +22,14 @@ const Course = ({ title, content, courses, id, t }: CourseProps) => {
 
 
   const courselist = courses.map((course: any,i:any) => {
-    return (<Col span={11} offset={i % 2 ==0 ? 0 : 2}>
-      <CourseImage src={course.img}></CourseImage>
-      <CourseTitle>{course.name}</CourseTitle>
-    </Col>)
+    return ( 
+      <Col span={11} offset={i % 2 ==0 ? 0 : 2}>
+         <Slide direction={i % 2 ==0 ? "left" : "right"}>
+            <CourseImage src={course.img}></CourseImage>
+            <CourseTitle>{course.name}</CourseTitle>
+         </Slide>
+      </Col>
+    )
   });
 
   return (

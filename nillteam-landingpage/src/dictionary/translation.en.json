@@ -8,14 +8,14 @@
     "Contact":"Contact",
 
     "Intro_Title":"Have you ever heard about Nill Team?",
-    "Intro_Description":"We are a group of professional sport trainer to help you be fit and healthy! We hold our session online and in person at gym.",
+    "Intro_Description":"We are a group of professional sport trainers to help you be fit and healthy! We hold our session online and in person at gym.",
     "Intro_Button":"Read More",
     "Intro_logo":"people-exercise2.svg",
 
     "Team_Title":"Our Team",
     "Team_Description":"",
     "Team_Members":[
-      {"id":1,"name":"Niloo","description":"A senior personal trainer with over 11 years of comprehensive experience in the bodybuilding, fitness, and TRX. customer-solutions provider and professional at physical therapy, nutrition and competitional fitness.","img":"img/asset/Nilou.jpg"},
+      {"id":1,"name":"Nilou","description":"A senior personal trainer with over 11 years of comprehensive experience in the bodybuilding, fitness, and TRX. customer-solutions provider and professional at physical therapy, nutrition and competitional fitness.","img":"img/asset/Nilou.jpg"},
       {"id":2,"name":"Mohamad","description":"Professional bodybuilder with 5 years of experience in the competitive bodybuilding field. Extensive knowledge in specialized lifting techniques and dietary field, with demonstrated results in top bodybuilding events.","img":"img/asset/Mohamad.jpg"},
       {"id":3,"name":"Elham","description":"Customer-focused personal trainer with proven track record in delivering the right raining regimen and dietary information to successfully achieve the clients' goals.","img":"img/asset/Elham.jpg"}
     ],
@@ -39,30 +39,13 @@
     "Nutrition_Button":"Read More",
     "Nutrition_logo":"img/asset/diet2.jpg",
 
-    "Policy": "Policy",
-    "Mission": "Mission",
-    "Product": "Product",
-    "Tell us everything": "Tell us everything",
-    
+    "Tell us everything":"Tell us everything",
     "Do you have any question? Feel free to reach out.": "Do you have any question? Feel free to reach out.",
     "Let's Chat": "Let's Chat",
-    "Application Security": "Application Security",
-    "Software Principles": "Software Principles",
-    "Support Center": "Support Center",
-    "Customer Support": "Customer Support",
     "Address": "Address",
-    "Press": "Press",
-    "Careers & Culture": "Careers & Culture",
-    "Language": "Language",
-    "Explore": "Explore",
-    "Learn more": "Learn more",
-    "Get started": "Get started",
-    "Submit": "Submit",
-    "Message" : "Message",
-    "Your Message": "Your Message",
-    "Name" : "Name",
-    "Your Name": "Your Name",
-    "Email" : "Email",
-    "Your Email": "Your Email"
+    "Address_Line1": "Adl Boulevard,",
+    "Address_Line2": "North Pounak district,",
+    "Address_Line3": "Tehran",
+    "Social media": "Social media"
   }
   
