@@ -22,21 +22,40 @@ const Course = ({ title, content, courses, id, t }: CourseProps) => {
 
 
   const courselist = courses.map((course: any,i:any) => {
-    return ( 
-      <Col span={11} offset={i % 2 ==0 ? 0 : 2}>
-         <Slide direction={i % 2 ==0 ? "left" : "right"}>
-            <CourseImage src={course.img}></CourseImage>
-            <CourseTitle>{course.name}</CourseTitle>
-         </Slide>
-      </Col>
-    )
+
+    if (window.innerWidth<=724)
+    {
+      return ( 
+        <Col sm={24} xs={24} >
+           <Slide direction={i % 2 ==0 ? "left" : "right"}>
+              <CourseImage src={course.img}></CourseImage>
+              <CourseTitle>{course.name}</CourseTitle>
+           </Slide>
+        </Col>
+      )
+    }
+    else
+    {
+      return ( 
+        <Col span={11} offset={i % 2 ==0 ? 0 : 2}>
+           <Slide direction={i % 2 ==0 ? "left" : "right"}>
+              <CourseImage src={course.img}></CourseImage>
+              <CourseTitle>{course.name}</CourseTitle>
+           </Slide>
+        </Col>
+      )
+    }
+
+
   });
+
+  console.log(window.innerWidth);
 
   return (
     <CourseSection id={id}>
       <Slide direction="down">
         {/* <ContentWrapper> */}
-          <Row  >
+          <Row>
             <Col lg={24} md={24} sm={24} xs={24}>
               <PageTitle>{title}</PageTitle>
             </Col>

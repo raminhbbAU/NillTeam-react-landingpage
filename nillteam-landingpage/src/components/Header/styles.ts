@@ -5,7 +5,6 @@ import { MenuOutlined } from "@ant-design/icons";
 export const HeaderSection = styled("header")`
   background: rgb(227, 232, 243);
   padding: 1rem 0.5rem;
-
   .ant-row-space-between {
     align-items: center;
     text-align: center;
@@ -15,6 +14,7 @@ export const HeaderSection = styled("header")`
 export const LogoContainer = styled(Link)`
   alignContent: 'left',
   display: flex;
+  justify-content: space-between;
 `;
 
 export const NavLink = styled("div")`
@@ -57,7 +57,7 @@ export const Burger = styled("div")`
 `;
 
 export const NotHidden = styled("div")`
-  @media only screen and (max-width: 890px) {
+  @media only screen and (max-width: 540px) {
     display: none;
   }
 `;
@@ -69,7 +69,8 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1rem;
+  font-size: 16px;
+  font-weight: 700;
   color: #18216d;
   transition: color 0.2s ease-in;
   margin: 8px;
@@ -122,4 +123,5 @@ export const LanguageSwitchContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   width: 85px;
+  alignContent: 'right';
 `;

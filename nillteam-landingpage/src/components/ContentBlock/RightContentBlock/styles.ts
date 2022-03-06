@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const RightBlockContainer = styled("section")`
   position: relative;
   padding: 10rem 40px 8rem;
+  text-align: center;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
 
   @media only screen and (max-width: 768px) {
     padding: 4rem 0 3rem;
+
   }
 `;
 

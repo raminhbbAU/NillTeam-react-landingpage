@@ -4,7 +4,7 @@ export const LeftContentSection = styled("section")`
   background: rgb(227, 232, 243);
   position: relative;
   padding: 10rem 40px 8rem;
-
+  text-align: center;
   @media only screen and (max-width: 1024px) {
     padding: 4rem 0 4rem;
   }

@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import i18n from "i18next";
 import Container from "../../components/common/Container";
 import { SvgIcon } from "../../components/common/SvgIcon";
+import { Button } from "../../components/common/Button";
 
 import {
   HeaderSection,
@@ -18,6 +19,7 @@ import {
   LanguageSwitchContainer,
   LanguageSwitch
 } from "./styles";
+
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -34,6 +36,10 @@ const Header = ({ t }: any) => {
   const languageChange = (language: string) => {
     i18n.changeLanguage(language);
   };
+
+  const goToCorePanel = () => {
+    window.location.href = "http://www.core.nillteam.ir"
+  }
 
   const MenuItem = () => {
 
@@ -69,28 +75,45 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo("contact")}>
           <Span>{t("Contact")}</Span>
         </CustomNavLinkSmall>
+        <CustomNavLinkSmall
+          style={{ width: "120px" }}
+          onClick={() => goToCorePanel()}
+        >
+          <Span>
+            <Button>{t("login_isgnup")}</Button>
+          </Span>
+        </CustomNavLinkSmall>
       </>
     );
   };
 
   return (
-    <HeaderSection>
+    <HeaderSection >
       <Container>
 
         <Row justify="space-between" align="middle">
 
-            <Col lg={4} md={4} sm={4} xs={4} >
+            <Col lg={4} md={4} sm={4} xs={14} >
+              <a>
+                <SvgIcon src="logo-image.svg" width="82px" height="82px" />
+                <SvgIcon src="logo.svg" width="101px" height="64px" />
+              </a>
+            </Col>
+
+            {/* <Col lg={4} md={4} sm={4} xs={4} >
               <LogoContainer to="/" aria-label="homepage">
                 <SvgIcon src="logo.svg" width="101px" height="64px" />
               </LogoContainer>
-            </Col>
+
+            </Col> */}
             <Col lg={15} md={15} sm={0} xs={0}>
               <NotHidden>
                 <MenuItem />
               </NotHidden>
             </Col>
-            <Col lg={4} md={4} sm={0} xs={0} >
-              <NotHidden>
+
+            <Col lg={2} md={2} sm={2} xs={2}>
+              {/* <NotHidden> */}
                 <LanguageSwitchContainer>
                     <LanguageSwitch onClick={() => languageChange("en")}>
                       <SvgIcon
@@ -109,10 +132,10 @@ const Header = ({ t }: any) => {
                       />
                     </LanguageSwitch>
                 </LanguageSwitchContainer>
-              </NotHidden>
+              {/* </NotHidden> */}
             </Col>
 
-            <Burger onClick={showDrawer}>
+            <Burger onClick={showDrawer} >
               <Outline />
             </Burger>
 

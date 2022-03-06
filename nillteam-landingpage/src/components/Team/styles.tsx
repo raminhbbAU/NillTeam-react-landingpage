@@ -6,9 +6,7 @@ export const TeamSection = styled("section")`
   text-align: center;
   justify-content: center;
   padding: 0 20px;
-  @media screen and (max-width: 1024px) {
-    padding: 5.5rem 0 3rem;
-  }
+
 `;
 export const PageTitle = styled("h6")`
   margin-bottom:100px;
